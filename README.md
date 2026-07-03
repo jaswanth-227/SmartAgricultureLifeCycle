@@ -18,32 +18,32 @@
 
 # 📖 Overview
 
-**SmartAgricultureLifeCycle** is an AI-powered agricultural decision support platform that assists farmers throughout the complete farming lifecycle—from crop selection and cultivation planning to quality assessment and post-harvest decision making.
+**SmartAgricultureLifeCycle** is an AI-powered agricultural decision support platform that assists farmers throughout the complete farming lifecycle—from crop selection and cultivation planning to harvest quality assessment and post-harvest decision making.
 
-The platform combines **Machine Learning**, **Expert Validation**, and **Market Intelligence** to provide reliable, data-driven recommendations that help farmers maximize productivity, improve crop quality, and increase profitability.
+The platform integrates **Machine Learning**, **Expert Validation**, and **Market Intelligence** to provide intelligent recommendations that improve productivity, maximize crop quality, and increase farmers' profitability.
 
 ---
 
 # ✨ Highlights
 
-- 🌱 Intelligent Crop Recommendation using Machine Learning
+- 🌱 AI-Based Crop Recommendation
 - 🌾 Crop Quality Assessment
-- 📈 Market Trend & Price Analysis
-- 📦 AI-Assisted Post-Harvest Decision Support
-- 👨‍🔬 Expert Validation at Every Stage
-- 📊 Interactive Reports & Visualizations
-- 🌍 End-to-End Smart Agriculture Lifecycle Management
+- 📈 Market Trend Analysis
+- 📦 Post-Harvest Decision Support
+- 👨‍🔬 Expert Validation
+- 📊 Interactive Dashboard
+- 🌍 End-to-End Agriculture Lifecycle Management
 
 ---
 
 # 🎯 Objectives
 
-- Recommend the most suitable crop based on soil and environmental conditions.
-- Improve agricultural productivity using Machine Learning.
-- Assess crop quality after harvesting.
+- Recommend suitable crops using soil and environmental parameters.
+- Improve farming decisions using Machine Learning.
+- Assess harvested crop quality.
 - Analyze market trends for better selling decisions.
 - Provide intelligent post-harvest recommendations.
-- Integrate AI predictions with agricultural expert knowledge.
+- Combine AI predictions with agricultural expert knowledge.
 
 ---
 
@@ -51,6 +51,7 @@ The platform combines **Machine Learning**, **Expert Validation**, and **Market 
 
 ## 🌱 Pre-Harvest Module
 
+- Farmer Registration & Login
 - Soil Data Collection
 - Environmental Data Analysis
 - Crop Recommendation
@@ -61,11 +62,11 @@ The platform combines **Machine Learning**, **Expert Validation**, and **Market 
 
 ## 🌾 Harvest Module
 
-- Harvest Information Submission
+- Harvest Details Submission
 - Crop Quality Assessment
 - Moisture Analysis
 - Damage Analysis
-- Grade Prediction (A / B / C)
+- Grade Prediction (A/B/C)
 - Expert Validation
 
 ---
@@ -74,7 +75,7 @@ The platform combines **Machine Learning**, **Expert Validation**, and **Market 
 
 - Historical Price Analysis
 - Market Trend Visualization
-- Price Prediction
+- Future Price Prediction
 - Demand Analysis
 
 ---
@@ -84,23 +85,37 @@ The platform combines **Machine Learning**, **Expert Validation**, and **Market 
 Based on crop quality and market trends, the platform recommends:
 
 - ✅ Sell Immediately
-- 📦 Store for Future Sale
-- 🏭 Process Before Selling
+- 📦 Store
+- 🏭 Process
 
-Every recommendation is reviewed by an agricultural expert.
+All recommendations are validated by agricultural experts.
 
 ---
 
 # 🏗️ System Architecture
 
-The SmartAgricultureLifeCycle platform follows a modular architecture integrating Machine Learning, Expert Validation, Market Intelligence, and Decision Support.
+The SmartAgricultureLifeCycle platform integrates a modern web application with Machine Learning models and expert validation to support farmers throughout the agricultural lifecycle.
+
+## 🌐 Overall System Pipeline
 
 <p align="center">
-<img src="smart_agriculture_architecture.svg" width="1000">
+<img src="smart_agriculture_main_pipeline.svg" width="1000">
 </p>
 
 <p align="center">
-<b>Figure.</b> Overall architecture of the SmartAgricultureLifeCycle platform.
+<b>Figure 1.</b> Overall workflow of SmartAgricultureLifeCycle illustrating farmer interaction, backend services, AI modules, expert validation, and final recommendations.
+</p>
+
+---
+
+## 🤖 Machine Learning & Data Layer
+
+<p align="center">
+<img src="smart_agriculture_data_ml_layer.svg" width="1000">
+</p>
+
+<p align="center">
+<b>Figure 2.</b> Machine Learning and data processing pipeline showing dataset ingestion, preprocessing, Random Forest crop prediction, market analysis, and database interactions.
 </p>
 
 ---
@@ -114,7 +129,8 @@ Farmer Login
 Enter Soil Information
       │
       ▼
-Crop Recommendation (Random Forest)
+Crop Recommendation
+(Random Forest)
       │
       ▼
 Expert Validation
@@ -174,9 +190,9 @@ Final Recommendation
 
 The platform analyzes:
 
-- Historical Market Prices
-- Price Trends
-- Future Price Prediction
+- Historical Price Trends
+- Future Market Prices
+- Market Demand
 
 using:
 
@@ -187,14 +203,14 @@ using:
 
 # 👨‍🔬 Expert Validation
 
-A unique feature of the platform is **Expert-in-the-Loop Decision Support**.
+One of the key features of the platform is **Expert-in-the-Loop Decision Support**.
 
 Agricultural experts can:
 
-- Review Machine Learning predictions
+- Review AI predictions
 - Modify recommendations
-- Approve final results
-- Add personalized farming advice
+- Approve final outputs
+- Provide personalized farming advice
 
 Displayed to farmers as:
 
@@ -206,13 +222,13 @@ Displayed to farmers as:
 
 # 📊 Dashboard & Reports
 
-The system provides:
+The platform provides:
 
 - Crop Recommendation Dashboard
-- Quality Assessment Report
+- Crop Quality Assessment
 - Market Trend Graphs
-- Downloadable PDF Reports
 - Expert Recommendations
+- Downloadable Reports
 
 ---
 
@@ -224,7 +240,7 @@ The system provides:
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap / Tailwind CSS
+- Bootstrap
 
 ---
 
@@ -241,6 +257,7 @@ The system provides:
 - Scikit-Learn
 - Pandas
 - NumPy
+- Random Forest
 
 ---
 
@@ -254,7 +271,7 @@ The system provides:
 
 ## 🌱 Crop Recommendation Dataset
 
-Input Features
+### Features
 
 - Nitrogen
 - Phosphorus
@@ -264,7 +281,7 @@ Input Features
 - pH
 - Rainfall
 
-Target
+### Target
 
 - Recommended Crop
 
@@ -272,13 +289,13 @@ Target
 
 ## 📈 Market Dataset
 
-Features
+### Features
 
 - Crop Name
-- Market Name
+- Market
 - Location
 - Date
-- Market Price
+- Price
 
 ---
 
@@ -291,11 +308,15 @@ POST /login
 POST /register
 ```
 
+---
+
 ## Crop Recommendation
 
 ```http
 POST /predict-crop
 ```
+
+---
 
 ## Harvest
 
@@ -303,17 +324,23 @@ POST /predict-crop
 POST /submit-harvest
 ```
 
+---
+
 ## Market Intelligence
 
 ```http
 GET /market-trend
 ```
 
+---
+
 ## Post-Harvest
 
 ```http
 POST /post-harvest-decision
 ```
+
+---
 
 ## Expert Validation
 
@@ -338,7 +365,7 @@ POST /expert/post-harvest-review
 - 👨‍🔬 Expert Validation
 - 📊 Interactive Dashboard
 - 📑 Downloadable Reports
-- 🌍 Complete Farm Lifecycle Management
+- 🌍 End-to-End Smart Agriculture Lifecycle Management
 
 ---
 
@@ -347,14 +374,18 @@ POST /expert/post-harvest-review
 ```text
 SmartAgricultureLifeCycle
 │
-├── frontend/
-├── backend/
-├── machine_learning/
-├── datasets/
-├── architecture/
-│   └── smart_agriculture_architecture.svg
-├── README.md
-└── requirements.txt
+├── 📁 frontend/
+├── 📁 backend/
+├── 📓 Agrilifecycle.ipynb
+├── 📓 model.ipynb
+├── 📊 Crop_recommendation.csv
+├── 📊 final_dataset.csv
+├── 🖼️ smart_agriculture_main_pipeline.svg
+├── 🖼️ smart_agriculture_data_ml_layer.svg
+├── 📄 package.json
+├── 📄 package-lock.json
+├── 📄 .gitignore
+└── 📄 README.md
 ```
 
 ---
@@ -369,38 +400,38 @@ git clone https://github.com/yourusername/SmartAgricultureLifeCycle.git
 cd SmartAgricultureLifeCycle
 ```
 
-Install dependencies
+Install project dependencies
 
 ```bash
 npm install
-
-pip install -r requirements.txt
 ```
 
-Start the backend
+Run the backend server
 
 ```bash
 npm start
 ```
 
-Run the Machine Learning module
+Open the Machine Learning notebooks
 
-```bash
-python predict.py
-```
+- `Agrilifecycle.ipynb`
+- `model.ipynb`
 
+using **Jupyter Notebook** or **Google Colab**.
 
+---
 
 # 🚀 Future Enhancements
 
-- 📷 AI-based Crop Quality Detection using Computer Vision
-- 🌦 Real-Time Weather API Integration
+- 📷 AI-based Crop Disease Detection
+- 🌦 Weather API Integration
 - 📱 Android & iOS Mobile Application
 - ☁ Cloud Deployment (AWS / Azure)
 - 🤖 Deep Learning-Based Crop Recommendation
 - 🌍 Multi-Language Support
-- 🛰 Satellite Image-Based Crop Monitoring
-- 🌡 IoT Sensor Integration for Smart Farming
+- 🛰 Satellite-Based Crop Monitoring
+- 🌡 IoT Sensor Integration
+- 📊 Real-Time Farmer Analytics Dashboard
 
 
 ---
@@ -409,6 +440,6 @@ python predict.py
 
 ⭐ **If you found SmartAgricultureLifeCycle useful, please consider giving this repository a Star!**
 
-Made with ❤️ for Smart Agriculture & AI-powered Farming.
+Made with ❤️ for Smart Agriculture and AI-Powered Farming.
 
 </p>
